@@ -1,6 +1,8 @@
 #include <iostream>
 #include <zmq.hpp>
 #include <string>
+#include <vector>
+
 
 int main(){
 
