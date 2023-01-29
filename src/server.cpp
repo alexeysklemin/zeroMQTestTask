@@ -2,10 +2,10 @@
 #include <chrono>
 #include <thread>
 #include <iostream>
-
+#include "server.h"
 #include <zmq.hpp>
 
-int main() 
+void server() 
 {
     using namespace std::chrono_literals;
 

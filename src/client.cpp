@@ -1,9 +1,9 @@
 #include <string>
 #include <iostream>
-
+#include "client.h"
 #include <zmq.hpp>
 
-int main()
+void client()
 {
     // initialize the zmq context with a single IO thread
     zmq::context_t context{1};

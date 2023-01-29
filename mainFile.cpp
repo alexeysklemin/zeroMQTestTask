@@ -1,15 +1,26 @@
-#include <iostream>
-#include <zmq.hpp>
+//  Send a message on the 'status' topic
 #include <string>
-#include <vector>
+#include <iostream>
 
+#include <zmq.hpp>
+#include "server.h"
+#include "client.h"
 
 int main(){
+/* initialize the zmq context with a single IO thread
+    zmq::context_t context{1};
 
-zmq::context_t ctx;
-zmq::socket_t sock(ctx, zmq::socket_type::push);
-sock.bind("inproc://test");
-const std::string_view m =  "Hello world";
-sock.send(zmq::buffer(m), zmq::send_flags::dontwait);
+    // construct a PUB (publisher) socket and connect to interface
+    zmq::socket_t publisher{context, zmq::socket_type::pub};
+    publisher.bind("tcp://*:5555");
 
+    while(true){
+        //  Write three messages, each with an envelope and content
+        publisher.send(zmq::str_buffer("status"), zmq::send_flags::none);
+        publisher.send(zmq::str_buffer("Message in status"));
+    }
+
+    return 0;*/
+server();
+client();
 }
