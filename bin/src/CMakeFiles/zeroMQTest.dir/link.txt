@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c+11 -lzmq CMakeFiles/zeroMQTest.dir/mainFile.cpp.o CMakeFiles/zeroMQTest.dir/server.cpp.o CMakeFiles/zeroMQTest.dir/client.cpp.o -o zeroMQTest 
