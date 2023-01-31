@@ -34,6 +34,6 @@ void server()
         socket.send(zmq::buffer(data), zmq::send_flags::none);
     }
 
-    return 0;
+  //  return 0;
 
 }

@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c+11 -lzmq CMakeFiles/zeroMQTestS.dir/mainFile.cpp.o -o zeroMQTestS 
