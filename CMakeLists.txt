@@ -1,6 +1,14 @@
 cmake_minimum_required (VERSION 3.18)
-project("zeroMQTestTask" VERSION 1.0)
+project("zeroMQTestTask" VERSION 2.0)
 
 set(CMAKE_CXX_SANDARD 11)
 
-add_execurable(zeroMQTestTask main.cpp)
+find_package(Protobuf REQUIERD)
+
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS service.proto)
+
+add_library(proto ${PROTO_SRC} ${PROTO_HDRS})
+
+add_executable(zeroMQTestTask main.cpp)
+
+target_link_libraries(zeroMQTestTask PRIVATE ${PROTOBUF__LIBRARIES})

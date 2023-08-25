@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package candy;
+
+
+message send_text{
+
+	int32 send_id = 1;
+	string text = 2;
+	int32 recv_id =3;
+
+}
