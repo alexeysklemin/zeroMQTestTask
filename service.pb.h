@@ -172,11 +172,11 @@ class send_text :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTextFieldNumber = 2,
+    kTextFieldNumber = 3,
     kSendIdFieldNumber = 1,
-    kRecvIdFieldNumber = 3,
+    kRecvIdFieldNumber = 2,
   };
-  // string text = 2;
+  // string text = 3;
   void clear_text();
   const std::string& text() const;
   void set_text(const std::string& value);
@@ -201,7 +201,7 @@ class send_text :
   void _internal_set_send_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 recv_id = 3;
+  // int32 recv_id = 2;
   void clear_recv_id();
   ::PROTOBUF_NAMESPACE_ID::int32 recv_id() const;
   void set_recv_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -252,7 +252,27 @@ inline void send_text::set_send_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:candy.send_text.send_id)
 }
 
-// string text = 2;
+// int32 recv_id = 2;
+inline void send_text::clear_recv_id() {
+  recv_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 send_text::_internal_recv_id() const {
+  return recv_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 send_text::recv_id() const {
+  // @@protoc_insertion_point(field_get:candy.send_text.recv_id)
+  return _internal_recv_id();
+}
+inline void send_text::_internal_set_recv_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  recv_id_ = value;
+}
+inline void send_text::set_recv_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_recv_id(value);
+  // @@protoc_insertion_point(field_set:candy.send_text.recv_id)
+}
+
+// string text = 3;
 inline void send_text::clear_text() {
   text_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -310,26 +330,6 @@ inline void send_text::set_allocated_text(std::string* text) {
   }
   text_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), text);
   // @@protoc_insertion_point(field_set_allocated:candy.send_text.text)
-}
-
-// int32 recv_id = 3;
-inline void send_text::clear_recv_id() {
-  recv_id_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 send_text::_internal_recv_id() const {
-  return recv_id_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 send_text::recv_id() const {
-  // @@protoc_insertion_point(field_get:candy.send_text.recv_id)
-  return _internal_recv_id();
-}
-inline void send_text::_internal_set_recv_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  recv_id_ = value;
-}
-inline void send_text::set_recv_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_recv_id(value);
-  // @@protoc_insertion_point(field_set:candy.send_text.recv_id)
 }
 
 #ifdef __GNUC__

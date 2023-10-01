@@ -12,7 +12,7 @@ int generateUniqueId(){
 	return rand();
 }
 
-/*void sendStopMessage(zmq::socket_t &socket){
+void sendStopMessage(zmq::socket_t &socket){
 
 	ServiceMassage message;
 	message.set_command(ServiceMessage::STOP);
@@ -34,14 +34,14 @@ void recieveMessage(zmq::socket_t &socket, vector<int> &ids){
 
 	if(message.command()==ServiceMessage::STOP){
 		ids.erase(remove(ids.begin, ids.end(), message.id()), ids.end());
-	}*/
+	}
 
 
 
 
 int main(int argc, char* argv[]){
 
-/*	bool isMaster=true;
+	bool isMaster=true;
 
 	if(argc>1 && string(argv[1] == "-k"){
 		isMaster=false;
@@ -75,13 +75,7 @@ int main(int argc, char* argv[]){
 		}else{
 			receiveMessage(socket, ids);
 		}
-	}*/
-	
-	std::vector<int> uniqueId;
-	
-	uniqueId.push_back(generateUniqueId());
-	
-	std::cout<<uniqueId[0];
+	}
 
 	return 0;
 }
